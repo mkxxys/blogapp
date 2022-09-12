@@ -1,0 +1,26 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        
+
+        
+        {
+            // "type": "pwa-msedge",
+            "type": "Ruby",
+            "request": "launch",
+            "name": "Launch Edge against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rails",
+            "pathToRDebugIDE": "/home/trantan/.rbenv/versions/2.5.1/bin/rdebug-ide",
+            "args": [
+                "server"
+              ]
+        }
+    ]
+}
