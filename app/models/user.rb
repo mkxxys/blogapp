@@ -27,8 +27,12 @@ class User < ApplicationRecord
   has_many :favorite_articles, through: :likes, source: :article
   #自分がフォローしている時のデータを持ってくる(following_relationshipsというテーブルやモデルは作ってないためclass_nameで何のテーブルのことか書く)
   has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
-  #フォローしている人のデータを持ってくる(これもテーブルやモデルは作ってないためsource: :followingで分かるようにする)
+  #自分がフォローしている人のデータを持ってくる(これもテーブルやモデルは作ってないためsource: :followingで分かるようにする)
   has_many :followings, through: :following_relationships, source: :following
+
+  has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
+  #フォロワーを取得したい場合
+  has_many :followers, through: :follower_relationships, source: :follower
 
   has_one :profile, dependent: :destroy
 
