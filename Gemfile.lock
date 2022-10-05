@@ -37,6 +37,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_decorator (1.4.0)
+      activesupport
     activejob (6.0.6)
       activesupport (= 6.0.6)
       globalid (>= 0.3.6)
@@ -63,7 +65,7 @@ GEM
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.640.0)
+    aws-partitions (1.642.0)
     aws-sdk-core (3.158.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
@@ -123,7 +125,7 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    haml (6.0.3)
+    haml (6.0.5)
       temple (>= 0.8.2)
       thor
       tilt
@@ -286,6 +288,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2022.4)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.3.0)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -314,6 +318,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_decorator
   annotate
   aws-sdk-s3
   better_errors
